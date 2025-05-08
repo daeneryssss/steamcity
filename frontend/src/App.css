@@ -1,0 +1,11 @@
+@import url(./reset.css);
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  color: #000;
+  background-color: #fed8d8;
+}
+
+a {
+  text-decoration: none;
+}

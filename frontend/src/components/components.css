@@ -6,6 +6,8 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 4px 0px 4px #000;
+    position: sticky;
+    top: 0;
 }
 
 .Menu {
@@ -13,6 +15,11 @@
     width: 40%;
     justify-content: space-around;
     align-items: center;
+}
+
+.ActiveLink {
+    border-bottom: 2px solid var(--third-background-color);
+    padding-bottom: 2px;
 }
 
 .HeaderLogo {
@@ -45,4 +52,22 @@
 
 .LogoImage {
     height: 30px;
+}
+
+.PageFooter {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FooterBorder {
+    width: 90%;
+    border-top: 1px solid var(--first-background-color);
+    margin: 1%;
+}
+
+.FooterText {
+    color: var(--first-background-color);
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import "./components.css";
+import { NavLink } from "react-router-dom";
+
 import logo from "../images/logo.jpg";
 import instagramlogo from "../images/instagram.png";
 import telegramlogo from "../images/telegram.png";
@@ -8,10 +10,10 @@ const Header = ({ }) => {
     return (
         <header className="PageHeader">
             <ul className="Menu">
-                <li className="MenuItem"><a href="/" className="MenuItemLink">Головна</a></li>
-                <li className="MenuItem"><a href="/about" className="MenuItemLink">Про нас</a></li>
-                <li className="MenuItem"><a href="/reviews" className="MenuItemLink">Відгуки</a></li>
-                <li className="MenuItem"><a href="/contacts" className="MenuItemLink">Контакти</a></li>
+                <li className="MenuItem"><NavLink to="/" end className={({ isActive }) => isActive ? "MenuItemLink ActiveLink" : "MenuItemLink"}>Головна</NavLink></li>
+                <li className="MenuItem"><NavLink to="/about" end className={({ isActive }) => isActive ? "MenuItemLink ActiveLink" : "MenuItemLink"}>Про нас</NavLink></li>
+                <li className="MenuItem"><NavLink to="/reviews" end className={({ isActive }) => isActive ? "MenuItemLink ActiveLink" : "MenuItemLink"}>Відгуки</NavLink></li>
+                <li className="MenuItem"><NavLink to="/contacts" end className={({ isActive }) => isActive ? "MenuItemLink ActiveLink" : "MenuItemLink"}>Контакти</NavLink></li>
             </ul>
             <a href="/" className="HeaderLogo"><img src={logo} alt="Logo" className="HeaderLogoImage" /></a>
             <section className="RightSideMenu">
